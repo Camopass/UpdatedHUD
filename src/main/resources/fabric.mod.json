@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "updatedhud",
+  "version": "${version}",
+
+  "name": "Updated HUD",
+  "description": "Replaces the default health and food bars with more simplified versions.",
+  "authors": [
+    "Camopass"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/updatedhud/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.camopass.updatedhud.UpdatedHudKt::init"
+    ]
+  },
+  "mixins": [
+    "updatedhud.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.8.7",
+    "fabric": "*",
+    "fabric-language-kotlin": "*",
+    "minecraft": "1.17.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

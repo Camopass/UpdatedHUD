@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.camopass.updatedhud.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "HudMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
