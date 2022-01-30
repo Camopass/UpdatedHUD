@@ -1,37 +1,44 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "updatedhud",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Updated HUD",
+  "description": "Replaces the default health and food bars with more simplified versions.",
   "authors": [
-    "Me!"
+    "Camopass"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/Camopass/UpdatedHUD/tree/main",
+    "sources": "https://github.com/Camopass/UpdatedHUD/tree/main",
+    "issues": "https://github.com/Camopass/UpdatedHUD/issues"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/updatedhud/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleModKt::init"
+    "client": [
+      {"adapter": "kotlin",
+      "value": "net.camopass.updatedhud.UpdatedHud"}
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "updatedhud.mixins.json",
+    {
+      "config": "updatedhud.client-mixins.json",
+      "environment": "client"
+    }
   ],
   "depends": {
     "fabricloader": ">=0.8.7",
     "fabric": "*",
     "fabric-language-kotlin": "*",
-    "minecraft": "1.17.x"
+    "minecraft": "1.18.x"
   },
   "suggests": {
     "flamingo": "*"
-  }
+  },
+  "accessWidener": "updatedhud.accessWidener"
 }
